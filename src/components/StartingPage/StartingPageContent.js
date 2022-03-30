@@ -7,5 +7,4 @@ const StartingPageContent = () => {
     </section>
   );
 };
-
 export default StartingPageContent;

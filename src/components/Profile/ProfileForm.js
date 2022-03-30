@@ -32,7 +32,7 @@ const ProfileForm = () => {
           history.replace('/');
         }
       })
-      .catch((error) => {});
+      .catch((error) => console.log(error));
   };
   
   return (

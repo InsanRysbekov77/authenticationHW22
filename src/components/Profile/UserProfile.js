@@ -9,5 +9,4 @@ const UserProfile = () => {
     </section>
   );
 };
-
 export default UserProfile;

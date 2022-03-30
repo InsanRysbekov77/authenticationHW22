@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 
 export const authContext = React.createContext({
   //   email: '',
@@ -11,6 +12,7 @@ export const authContext = React.createContext({
 });
 
 export const AuthContextProvider = (props) => {
+  const history = useHistory()
   const [token, setToken] = useState(null);
 
   useEffect(() => {
@@ -28,6 +30,7 @@ export const AuthContextProvider = (props) => {
   const logoutHandler = () => {
     setToken(null);
     localStorage.removeItem('@token-onine-store');
+    history.replace('/')
   };
 
   const contextValue = {
